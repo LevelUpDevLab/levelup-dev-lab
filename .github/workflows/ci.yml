@@ -54,6 +54,21 @@ jobs:
         working-directory: episodes/${{ matrix.episode }}
         run: make test
 
+  publish-tool:
+    name: publish tool tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: setup
+        working-directory: tools/publish
+        run: make setup
+      - name: test
+        working-directory: tools/publish
+        run: make test
+
   pre-commit:
     name: pre-commit (lint & format)
     runs-on: ubuntu-latest
