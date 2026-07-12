@@ -1,0 +1,14 @@
+{
+  "name": "levelup-006-build-your-own-cli-node",
+  "version": "1.0.0",
+  "description": "Episode 006 — build your own CLI (Node).",
+  "private": true,
+  "bin": {
+    "wordcount": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node tests/cli.test.js"
+  },
+  "license": "MIT"
+}

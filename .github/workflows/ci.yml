@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Cancel superseded runs on the same ref.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  episode-tests:
+    name: test ${{ matrix.episode }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        episode:
+          - 001-automation-hello-world
+          - 002-clean-code-naming
+          - 003-dev-tooling-editor-setup
+          - 004-observability-basics
+          - 005-build-your-own-cli-python
+          - 006-build-your-own-cli-node
+    steps:
+      - uses: actions/checkout@v4
+
+      # Every job gets all three toolchains so any episode can run here,
+      # regardless of which language(s) it uses.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: make setup
+        working-directory: episodes/${{ matrix.episode }}
+        run: make setup
+
+      - name: make test
+        working-directory: episodes/${{ matrix.episode }}
+        run: make test
+
+  pre-commit:
+    name: pre-commit (lint & format)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.1
