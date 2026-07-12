@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Keep the GitHub Actions used in CI up to date.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+
+  # Episode 006 is the only folder with an npm manifest.
+  - package-ecosystem: "npm"
+    directory: "/episodes/006-build-your-own-cli-node"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
