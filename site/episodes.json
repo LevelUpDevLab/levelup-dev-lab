@@ -1,0 +1,15 @@
+{
+  "episodes": [
+    {
+      "number": "001",
+      "title": "Automation: Hello, World",
+      "slug": "001-automation-hello-world",
+      "pillar": "Automation Recipes",
+      "languages": ["Python"],
+      "summary": "A realistic first automation: scan a folder of mixed files and write a single Markdown status report grouping files by extension, size, and last-modified date. Standard library only.",
+      "codeUrl": "https://github.com/LevelUpDevLab/levelup-dev-lab/tree/main/episodes/001-automation-hello-world",
+      "videoUrl": null,
+      "published": "2026-07-12"
+    }
+  ]
+}

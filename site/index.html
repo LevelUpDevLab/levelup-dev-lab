@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="LevelUp Dev Lab teaches entry-level developers to think and build like engineers: automation, best practices, dev tooling, and building your own tools in Python, Java, and JavaScript."
+        />
+        <meta name="color-scheme" content="dark" />
+        <meta name="theme-color" content="#0d1117" />
+        <title>LevelUp Dev Lab</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <header class="site-header">
+            <p class="site-mark">
+                levelup-dev-lab<span aria-hidden="true"> $</span>
+            </p>
+            <nav aria-label="Sections">
+                <ul>
+                    <li><a href="#pillars">Pillars</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#latest">Latest</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <section class="hero" aria-labelledby="hero-title">
+                <h1 id="hero-title">LevelUp Dev Lab</h1>
+                <p class="promise">
+                    Help entry-level devs think and build like engineers.
+                </p>
+                <p class="hero-detail">
+                    Practical episodes on automation, best practices, dev
+                    tooling, and building your own tools — in Python, Java, and
+                    JavaScript. Every episode ships as a runnable project you
+                    can clone, run, and break.
+                </p>
+                <p class="hero-actions">
+                    <a
+                        class="button"
+                        href="https://www.youtube.com/@LevelUpDevLab?sub_confirmation=1"
+                        >Subscribe on YouTube</a
+                    >
+                    <a
+                        class="button button-secondary"
+                        href="https://github.com/LevelUpDevLab/levelup-dev-lab"
+                        >Browse the code</a
+                    >
+                </p>
+            </section>
+
+            <section id="pillars" aria-labelledby="pillars-title">
+                <h2 id="pillars-title">Four pillars</h2>
+                <ul class="cards">
+                    <li class="card">
+                        <h3>Automation Recipes</h3>
+                        <p>
+                            Small scripts that delete busywork. Each recipe
+                            solves a chore you would otherwise do by hand.
+                        </p>
+                    </li>
+                    <li class="card">
+                        <h3>Best Practices</h3>
+                        <p>
+                            The habits that separate juniors from engineers:
+                            naming, tests, error handling, observability.
+                        </p>
+                    </li>
+                    <li class="card">
+                        <h3>Dev Tooling</h3>
+                        <p>
+                            Configure and master the tools you already use —
+                            editors, linters, formatters, CI.
+                        </p>
+                    </li>
+                    <li class="card">
+                        <h3>Build Your Own Tooling</h3>
+                        <p>
+                            Go from tool user to tool maker. CLIs, scaffolders,
+                            and helpers built from the standard library up.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="roadmap" aria-labelledby="roadmap-title">
+                <h2 id="roadmap-title">Six-month roadmap</h2>
+                <ol class="roadmap">
+                    <li>
+                        <span class="roadmap-when">Jul 2026</span>
+                        <span class="roadmap-what"
+                            >Automation foundations — folder reports, file
+                            chores, and the anatomy of a small tool.</span
+                        >
+                    </li>
+                    <li>
+                        <span class="roadmap-when">Aug 2026</span>
+                        <span class="roadmap-what"
+                            >Clean code fundamentals — naming, functions, and
+                            the same ideas across Python, Java, and
+                            JavaScript.</span
+                        >
+                    </li>
+                    <li>
+                        <span class="roadmap-when">Sep 2026</span>
+                        <span class="roadmap-what"
+                            >Dev tooling — editor setup, formatters, pre-commit
+                            hooks, and a CI pipeline from scratch.</span
+                        >
+                    </li>
+                    <li>
+                        <span class="roadmap-when">Oct 2026</span>
+                        <span class="roadmap-what"
+                            >Observability basics — logging, timing, and reading
+                            what your program tells you.</span
+                        >
+                    </li>
+                    <li>
+                        <span class="roadmap-when">Nov 2026</span>
+                        <span class="roadmap-what"
+                            >Build your own CLI — argument parsing, exit codes,
+                            and testable command-line tools in Python and
+                            Node.</span
+                        >
+                    </li>
+                    <li>
+                        <span class="roadmap-when">Dec 2026</span>
+                        <span class="roadmap-what"
+                            >Community month — viewer contributions, code review
+                            episodes, and the season recap.</span
+                        >
+                    </li>
+                </ol>
+            </section>
+
+            <section id="latest" aria-labelledby="latest-title">
+                <h2 id="latest-title">Latest episode</h2>
+                <!-- Static content below is the no-JS baseline. script.js replaces it
+             with the newest entry from episodes.json when available. -->
+                <article class="episode" data-latest-episode>
+                    <h3>
+                        <span class="episode-number">001</span> Automation:
+                        Hello, World
+                    </h3>
+                    <p>
+                        A realistic first automation: scan a folder of mixed
+                        files and write a single Markdown status report grouping
+                        files by extension, size, and last-modified date.
+                        Standard library only.
+                    </p>
+                    <p class="episode-meta">Python · Automation Recipes</p>
+                    <p>
+                        <a
+                            href="https://github.com/LevelUpDevLab/levelup-dev-lab/tree/main/episodes/001-automation-hello-world"
+                            >Episode code and README</a
+                        >
+                    </p>
+                </article>
+            </section>
+
+            <section id="about" aria-labelledby="about-title">
+                <h2 id="about-title">About the creator</h2>
+                <p>
+                    LevelUp Dev Lab is made by a working developer who spent the
+                    first years of the job learning things the slow way — and
+                    would rather you did not have to. No shortcuts sold here:
+                    each episode is a small, honest project with tests, a
+                    written walkthrough, and the reasoning behind every
+                    decision.
+                </p>
+                <p>
+                    The channel favors the standard library over frameworks,
+                    plain text over slides, and working code over talk. If an
+                    episode cannot be cloned and run, it does not ship.
+                </p>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-title">
+                <h2 id="contact-title">Contact</h2>
+                <p>
+                    The best way to reach the channel is where the work happens:
+                </p>
+                <ul class="contact-list">
+                    <li>
+                        Questions about an episode —
+                        <a
+                            href="https://github.com/LevelUpDevLab/levelup-dev-lab/issues"
+                            >open an issue on GitHub</a
+                        >
+                    </li>
+                    <li>
+                        Suggestions and requests —
+                        <a href="https://www.youtube.com/@LevelUpDevLab"
+                            >comment on YouTube</a
+                        >
+                    </li>
+                    <li>
+                        Fixes and improvements —
+                        <a
+                            href="https://github.com/LevelUpDevLab/levelup-dev-lab/blob/main/CONTRIBUTING.md"
+                            >pull requests are welcome</a
+                        >
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>
+                LevelUp Dev Lab ·
+                <a href="https://github.com/LevelUpDevLab/levelup-dev-lab"
+                    >GitHub</a
+                >
+                · <a href="https://www.youtube.com/@LevelUpDevLab">YouTube</a> ·
+                <a
+                    href="https://github.com/LevelUpDevLab/levelup-dev-lab/blob/main/LICENSE"
+                    >MIT</a
+                >
+            </p>
+        </footer>
+    </body>
+</html>
