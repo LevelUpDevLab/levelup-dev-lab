@@ -35,7 +35,7 @@ Each episode is standalone. To work through one:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/<your-user>/levelup-dev-lab.git
+git clone https://github.com/LevelUpDevLab/levelup-dev-lab.git
 cd levelup-dev-lab
 
 # 2. Change into the episode you're watching
